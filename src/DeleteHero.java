@@ -7,7 +7,6 @@ import net.atos.entity.SuperHero;
 public class DeleteHero {
 	
 	public String deleteHero(EntityManager entityManager, Scanner sc){
-		
 		return delete(entityManager, sc);
 	}
 	
@@ -17,8 +16,7 @@ public class DeleteHero {
 		
 		SuperHero superHero = entityManager.find(SuperHero.class, id);	
 		entityManager.remove(superHero);
-		entityManager.getTransaction().commit();
-		
+		entityManager.getTransaction().commit();	
 		return ("Successfully Deleted " + superHero.getName());
 	}
 }

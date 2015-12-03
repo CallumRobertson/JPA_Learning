@@ -5,9 +5,8 @@ import net.atos.entity.SuperHero;
 
 public class Main {
 	
-	
-
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		Scanner sc = new Scanner(System.in);
 		EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("Eclipselink_JPA");
 		EntityManager entityManager = emfactory.createEntityManager();
@@ -20,7 +19,8 @@ public class Main {
 	}
 
 	private void options(Scanner sc, EntityManager entityManager, 
-		AddHero add, UpdateHero up, DeleteHero del) {
+		AddHero add, UpdateHero up, DeleteHero del) 
+	{
 		System.out.println("Hi please select an option: ");
 		System.out.println("1. Add a Hero!");
 		System.out.println("2. Edit a Hero!");
@@ -39,5 +39,4 @@ public class Main {
 			System.out.println(rs);
 		}
 	}
-
 }

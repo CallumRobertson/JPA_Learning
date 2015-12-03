@@ -6,17 +6,14 @@ import net.atos.entity.SuperHero;
 
 public class UpdateHero {
 
-	public String updateHero(EntityManager entityManager, Scanner sc){
-		 
+	public String updateHero(EntityManager entityManager, Scanner sc){ 
 		return hero(entityManager, sc);
-		
 	}
 	
 	private String hero(EntityManager entityManager, Scanner sc) {
 		System.out.println("Please enter the ID of the Hero you wish to update.");
 		int id = sc.nextInt();
 		SuperHero superHero = entityManager.find(SuperHero.class, id);
-		
 		System.out.println("Input new Name for: " + superHero.getName());
 		String name = sc.next();
 		superHero.setName(name);
