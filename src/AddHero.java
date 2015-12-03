@@ -10,7 +10,7 @@ public class AddHero {
 		return add(entityManager, sc);
 	}
 	
-	public String add(EntityManager entityManager, Scanner sc) {
+	private String add(EntityManager entityManager, Scanner sc) {
 		// This will be replaced by method that will interact with the User's input on website.
 		//Creates an object of my Entity class SuperHero
 		SuperHero hero = new SuperHero();
